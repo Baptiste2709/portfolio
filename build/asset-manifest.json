@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/Baptiste2709/portfolio/static/css/main.78e1e76d.css",
+    "main.js": "/Baptiste2709/portfolio/static/js/main.4f7f6fea.js",
+    "index.html": "/Baptiste2709/portfolio/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.78e1e76d.css",
+    "static/js/main.4f7f6fea.js"
+  ]
+}
