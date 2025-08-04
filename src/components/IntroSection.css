@@ -1,0 +1,30 @@
+/* Animation du curseur de typing */
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Animation de révélation du titre */
+.reveal-typo {
+  opacity: 0;
+  animation: revealTitle 1s ease-out forwards;
+}
+
+@keyframes revealTitle {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

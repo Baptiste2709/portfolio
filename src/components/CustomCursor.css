@@ -1,0 +1,62 @@
+.custom-cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle, rgba(245, 245, 245, 0.6) 30%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 0.3s ease;
+  mix-blend-mode: difference;
+  will-change: transform, opacity;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor.hovering {
+  transform: translate(-50%, -50%) scale(1.8);
+  background: radial-gradient(circle, rgba(245, 245, 245, 0.8) 40%, transparent 70%);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
+}
+
+/* Effet différent dans la section 3D */
+.custom-cursor.gallery-3d {
+  background: radial-gradient(circle, rgba(170, 170, 170, 0.4) 40%, transparent 70%);
+  width: 18px;
+  height: 18px;
+}
+
+.custom-cursor.gallery-3d.hovering {
+  transform: translate(-50%, -50%) scale(2);
+  background: radial-gradient(circle, rgba(170, 170, 170, 0.6) 50%, transparent 70%);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
+}
+
+/* Curseur normal du système */
+html, body {
+  cursor: auto;
+}
+
+/* Curseur pointer pour les éléments interactifs */
+button, 
+a, 
+.contact-btn, 
+.enter-btn, 
+.scroll-down-arrow, 
+.project-3d-card, 
+.tag,
+[role="button"] {
+  cursor: pointer !important;
+}
+
+/* Performance optimizations - curseur normal partout */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    cursor: auto !important;
+  }
+} 
