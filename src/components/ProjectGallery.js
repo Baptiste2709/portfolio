@@ -123,7 +123,7 @@ const ProjectGallery = ({ isOpen, onClose, projectImages, projectTitle }) => {
 
         <div className="gallery-description">
           <p>Rendu 3D photoréaliste réalisé à la demande d'un client souhaitant présenter son projet immobilier de manière plus professionnelle et légitime lors de sa présentation auprès de sa banque pour obtenir un financement.</p>
-          
+          {/*
           <div className="gallery-3d-section">
             <button 
               className="view-3d-btn"
@@ -133,6 +133,7 @@ const ProjectGallery = ({ isOpen, onClose, projectImages, projectTitle }) => {
               Voir en 3D Interactif
             </button>
           </div>
+          */}
         </div>
       </div>
       

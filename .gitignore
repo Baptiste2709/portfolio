@@ -1,1 +1,4 @@
 node_modules
+
+# Ignorer le modèle 3D lourd
+public/models/architectural-modeling/building.glb
