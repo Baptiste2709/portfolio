@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Baptiste2709/portfolio/static/css/main.78e1e76d.css",
-    "main.js": "/Baptiste2709/portfolio/static/js/main.7620486a.js",
-    "index.html": "/Baptiste2709/portfolio/index.html"
+    "main.css": "/portfolio/static/css/main.78e1e76d.css",
+    "main.js": "/portfolio/static/js/main.7620486a.js",
+    "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
     "static/css/main.78e1e76d.css",
