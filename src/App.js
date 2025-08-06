@@ -5,22 +5,26 @@ import ProjectGallery from './components/ProjectGallery';
 function App() {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   
+  // Préfixe commun pour toutes les images afin de gérer correctement le chemin
+  // que ce soit en développement (localhost) ou en production (GitHub Pages).
+  const IMAGE_BASE_PATH = `${(process.env.PUBLIC_URL || '').replace(/\/$/, '')}/images/projects/architectural-modeling/`;
+
   // Images du projet de modélisation architecturale
   const architecturalImages = [
-    '/images/projects/architectural-modeling/03.png',
-    '/images/projects/architectural-modeling/04.png',
-    '/images/projects/architectural-modeling/05.png',
-    '/images/projects/architectural-modeling/06.png',
-    '/images/projects/architectural-modeling/07.png',
-    '/images/projects/architectural-modeling/08.png',
-    '/images/projects/architectural-modeling/09.png',
-    '/images/projects/architectural-modeling/10.png',
-    '/images/projects/architectural-modeling/11.png',
-    '/images/projects/architectural-modeling/12.png',
-    '/images/projects/architectural-modeling/13.png',
-    '/images/projects/architectural-modeling/14.png',
-    '/images/projects/architectural-modeling/15.png'
-  ];
+    '03.png',
+    '04.png',
+    '05.png',
+    '06.png',
+    '07.png',
+    '08.png',
+    '09.png',
+    '10.png',
+    '11.png',
+    '12.png',
+    '13.png',
+    '14.png',
+    '15.png'
+  ].map((file) => `${IMAGE_BASE_PATH}${file}`);
 
   const scrollToGallery = () => {
     const gallerySection = document.querySelector('.scene-3d-gallery');
@@ -70,7 +74,7 @@ function App() {
               <div className="project-3d-card clickable" onClick={openProjectGallery}>
                 <div className="project-3d-preview">
                   <img 
-                    src="/images/projects/architectural-modeling/preview.png" 
+                    src={`${IMAGE_BASE_PATH}preview.png`} 
                     alt="Aperçu modélisation architecturale"
                     className="preview-image"
                   />
@@ -129,14 +133,11 @@ function App() {
               Contactez-moi pour discuter de votre projet.
             </p>
             <div className="contact-links">
-              <a href="mailto:baptiste.michaud@email.com" className="contact-btn">
+              <a href="mailto:baptiste-michaud@outlook.com" className="contact-btn">
                 Email
               </a>
-              <a href="https://linkedin.com/in/baptiste-michaud" className="contact-btn" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/baptiste-michaud-865283247/" className="contact-btn" target="_blank" rel="noopener noreferrer">
                 LinkedIn
-              </a>
-              <a href="https://behance.net/baptiste-michaud" className="contact-btn" target="_blank" rel="noopener noreferrer">
-                Behance
               </a>
             </div>
           </div>

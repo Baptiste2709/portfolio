@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio 3D Baptiste Michaud en React",
   "main": "src/index.js",
-  "homepage": "https://github.com/Baptiste2709/portfolio",
+  "homepage": "https://Baptiste2709.github.io/portfolio/",
   "scripts": {
     "start": "cross-env GENERATE_SOURCEMAP=false PORT=2222 react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",

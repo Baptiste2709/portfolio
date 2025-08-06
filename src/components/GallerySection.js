@@ -67,6 +67,28 @@ const GallerySection = () => {
             </div>
           ))}
         </div>
+        
+        {/* Galerie d'images de Modélisation Architecturale */}
+        <h2>Modélisation Architecturale - Galerie</h2>
+        <div className="projects-grid">
+          {[
+            "03.png", "04.png", "05.png", "06.png", "07.png", "08.png", "09.png", "10.png", "11.png", "12.png", "13.png", "14.png", "15.png", "preview.png"
+          ].map((img) => {
+            const basePath = `${(process.env.PUBLIC_URL || '').replace(/\/$/, '')}/images/projects/architectural-modeling/`;
+
+            return (
+              <div key={img} className="project-3d-card">
+                <div className="project-3d-preview">
+                  <img
+                    src={`${basePath}${img}`}
+                    alt={img}
+                    style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: '8px' }}
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
