@@ -9,6 +9,7 @@
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "prod": "npm run build && npm run deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
